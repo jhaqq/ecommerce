@@ -46,7 +46,7 @@ const SearchMenu = () => {
 
     const getItems = async () => {
         const items = await fetch (
-          'http://localhost:1337/api/items?populate=image',
+          'http://localhost:2000/api/items?populate=image',
           {method: 'GET'}
         );
     
@@ -121,7 +121,7 @@ const SearchMenu = () => {
                         {searchItems.map((item, index) => (
                             <SearchResult 
                                 key={index}
-                                image={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
+                                image={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`}
                                 name={item?.attributes?.name}
                                 price={item?.attributes?.price}
                             />

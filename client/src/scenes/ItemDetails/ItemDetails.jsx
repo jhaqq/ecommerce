@@ -26,7 +26,7 @@ const ItemDetails = () => {
 
     const getItem = async () => {
         const item = await fetch (
-            `http://localhost:1337/api/items/${itemid}?populate=image`,
+            `http://localhost:2000/api/items/${itemid}?populate=image`,
             {method: 'GET'}
         );
         const itemJSON = await item.json();
@@ -42,7 +42,7 @@ const ItemDetails = () => {
     //TODO: change so this is filtered by category
     const getItems = async () => {
         const items = await fetch (
-            'http://localhost:1337/api/items?populate=image',
+            'http://localhost:2000/api/items?populate=image',
             {method: 'GET'}
         );
         const itemsJSON = await items.json();
@@ -59,7 +59,7 @@ const ItemDetails = () => {
         <Box display='flex' flexWrap='wrap' columnGap='40px'>
             {/* IMAGES */}
             <Box flex='1 1 40%' mb='40px'>
-                <img src={`http://localhost:1337${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`} alt={item?.name} width='100%' height='100%' style={{ objectFit: 'contain' }} />
+                <img src={`http://localhost:2000${item?.attributes?.image?.data?.attributes?.formats?.medium?.url}`} alt={item?.name} width='100%' height='100%' style={{ objectFit: 'contain' }} />
             </Box>
             {/* ACTIONS */}
             <Box flex='1 1 50%' mb='40px'>
