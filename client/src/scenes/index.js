@@ -1,0 +1,10 @@
+export { default as Home } from './Home/Home';
+export { default as Navbar } from './Global/Navbar';
+export { default as CartMenu } from './Global/CartMenu';
+export { default as SearchMenu } from './Global/SearchMenu';
+export { default as Checkout } from './Checkout/Checkout';
+export { default as ItemDetails } from './ItemDetails/ItemDetails';
+export { default as Confirmation } from './Checkout/Confirmation';
+export { default as Icon } from '../components/Icon';
+export { default as Item } from '../components/Item';
+export { default as Footer } from './Global/Footer';
