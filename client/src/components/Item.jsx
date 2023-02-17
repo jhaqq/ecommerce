@@ -33,7 +33,7 @@ const Item = ({ item, width }) => {
     return (
         <Box width={width}>
             <Box position='relative' onMouseOver={() => setHovered(true)} onMouseOut={() => setHovered(false)}>
-                <img src={`http://localhost:2000/${url}`} alt={item.name} width='300px' height='400px' onClick={() => navigate(`/item/${item.id}`)} style={{ cursor: 'pointer' }}/>
+                <img src={`http://localhost:1337/${url}`} alt={item.name} width='300px' height='400px' onClick={() => navigate(`/item/${item.id}`)} style={{ cursor: 'pointer' }}/>
                 <Box display={hovered ? 'block' : 'none'} position='absolute' bottom='10%' left='0' width='100%' padding='0 5%'>
                     <Box display='flex' justifyContent='space-between'>
                         <Box display='flex' alignItems='center' backgroundColor={shades.neutral[100]} borderRadius='3px'>
